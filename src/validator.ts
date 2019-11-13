@@ -20,8 +20,8 @@ function verifyTime(utcNotBefore?: string, utcNotOnOrAfter?: string): boolean {
   notBeforeLocal = new Date(utcNotBefore!);
   notOnOrAfterLocal = new Date(utcNotOnOrAfter!);
   // return +notBeforeLocal <= +now && now < notOnOrAfterLocal;
-  // Here setting time diff b/w notBeforeLocal and now can be greater than -60 seconds. This comes in the scenario when there is a mismatch of time between sp and idp server timings which result in ERR_SUBJECT_VALIDATION error
-  return +now - +notBeforeLocal > -60000  && now < notOnOrAfterLocal;
+  // Here setting time diff b/w notBeforeLocal and now can be greater than -120 seconds. This comes in the scenario when there is a mismatch of time between sp and idp server timings which result in ERR_SUBJECT_VALIDATION error
+  return +now - +notBeforeLocal > -120000  && now < notOnOrAfterLocal;
 }
 
 export {
