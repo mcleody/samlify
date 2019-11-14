@@ -67,6 +67,7 @@ export default class Entity {
   * @param entityMeta is the entity metadata, deprecated after 2.0
   */
   constructor(entitySetting: EntityConstructor, entityType: 'idp' | 'sp') {
+    // @ts-ignore
     this.entitySetting = Object.assign({}, defaultEntitySetting, entitySetting);
     const metadata = entitySetting.metadata || entitySetting;
     switch (entityType) {
