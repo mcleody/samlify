@@ -43,6 +43,7 @@ export class ServiceProvider extends Entity {
       wantAssertionsSigned: false,
       wantMessageSigned: false,
     }, spSetting);
+    // @ts-ignore
     super(entitySetting, 'sp');
   }
 
