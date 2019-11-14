@@ -53,6 +53,7 @@ export class IdentityProvider extends Entity {
         console.warn('Invalid login response template');
       }
     }
+    // @ts-ignore
     super(entitySetting, 'idp');
   }
 
